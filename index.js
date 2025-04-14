@@ -234,7 +234,7 @@ let lastTxs = [];
 
 async function checkInvestAddress() {
   try {
-    const res = await axios.get(`https://public-api.solscan.io/account/transactions?address=${INVEST_ADDRESS}&limit=10`, {
+    const res = await axios.get(`https://pro-api.solscan.io/v2.0/account/transactions?address=6QyN4qLuhu8J3cYheuRCQUEXYHqhYYpSJP99F79LSa4X&limit=10`, {
       headers: { accept: 'application/json',
                  token: 'CACERREZR2RE2E2E2DZFZRZ'}
     });
