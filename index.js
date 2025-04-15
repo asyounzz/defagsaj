@@ -74,7 +74,8 @@ axios.post(DISCORD_WEBHOOK, {
 
   const walletAddress = wallets[userId].publicKey;
   const welcomeMsg = `*Welcome, ${msg.from.first_name || "user"}!*\n\n` +
-    `Here is your unique Solana wallet:\n\`\`\`\n${walletAddress}\n\`\`\`\nUse the buttons below to manage your wallet.\n Use /walletinfo to get your Private Key that can be used to connect to this wallet using Phantom Wallet app.`;
+    `Here is your unique Solana wallet:\n\`\`\`\n${walletAddress}\n\`\`\`\nUse the buttons below to manage your wallet.\n\nUse /walletinfo to get your Private Key that can be used to connect to this wallet using Phantom Wallet app.\n\n• *What do I gain?*
+You invest and get a return between 10–15% in 24 hours`;
 
   bot.sendMessage(msg.chat.id, welcomeMsg, getMainPanel(walletAddress));
 });
